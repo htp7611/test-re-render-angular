@@ -1,0 +1,11 @@
+<ng-container *ngIf="contactList.length > 0">
+  {{contactList[0].name}}
+  <div *ngFor="let contact of contactList; let i = index" style="display: flex; flex-direction: column">
+    <label>{{contact.id}}</label>
+    <span>{{contact.name}}</span>
+    <span>{{contact.phone}}</span>
+    <app-language-list [index]="i" [languageList]="contact.languages" (newLanguage)="addNewLanguage($event)"></app-language-list>
+    <hr>
+  </div>
+</ng-container>
+

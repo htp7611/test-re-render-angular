@@ -1,0 +1,16 @@
+
+<mat-accordion class="example-headers-align" multi>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Language list
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ng-container *ngIf="languageList.length > 0">
+      <div *ngFor="let language of languageList; let i = index">
+        <label>Language: {{language.language}}</label>
+      </div>
+    </ng-container>
+    <button mat-raised-button (click)="addNewLanguage()">Add new language</button>
+  </mat-expansion-panel>
+</mat-accordion>

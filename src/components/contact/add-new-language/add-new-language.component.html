@@ -1,0 +1,10 @@
+<form class="example-form" [formGroup]="languageForm">
+  <mat-form-field>
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput formControlName="language">
+  </mat-form-field>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="addNew()">ADD</button>
+  </div>
+</form>
